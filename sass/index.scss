@@ -1,0 +1,151 @@
+@import "_base.scss";
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: {
+        color: $color-bg;
+        repeat: no-repeat;
+    }
+}
+
+#screen{
+	position: absolute;
+	height: $outside-margin * 4.4;
+	width: 100%;
+	background-color: $color-base;
+	// opacity: 0.9;
+	z-index: -99;
+}
+
+#logo {
+    position: absolute;
+    top: $outside-margin;
+    left: $outside-margin;
+    width: 5%;
+    img {
+        width: 100%;
+    }
+}
+
+#nav{
+	position: absolute;
+	top: $outside-margin + 2.3%;
+	left: 11%;
+	margin: 0;
+	font: {
+		family: $font-stack;
+		color: white;
+		size: $font-nav;
+	}
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	a{
+		text-decoration: none;
+		color: white;
+		padding-right: 1vw;
+	}
+	a:hover {
+ 		color: $color-accent;
+ 	}
+}
+
+.user {
+	a{
+	position: absolute;
+	top: $outside-margin +2.4%;
+	right: $outside-margin + 8%;
+	text-decoration: none;
+	color: white;
+	letter-spacing: 1px;
+	font: {
+		family: $font-stack;
+		color: white;
+		size: 12px;
+		}
+	}	
+	a:hover {
+ 		color: $color-accent;
+ 	}
+}
+
+.login {
+	font-family: $font-stack;
+	button{
+	position: absolute;
+	width: 80px;
+	height: 24px;
+	top: $outside-margin + 1.7%;
+	right: $outside-margin;
+	background-color: $color-accent;
+	padding: .7vh 1vw .5vh 1vw;
+	border: none;
+	text-align: center;
+	letter-spacing: 1px;
+	color: white;
+	size: 12px;
+	}
+	button:hover {
+		opacity: 0.8;
+	}
+}
+
+h1{
+	position: absolute;
+	top: 58%;
+	right: $outside-margin;
+	margin-top: 0;
+	z-index: 1;
+	font: {
+		family: $font-stack;
+		weight: normal;
+		size: 56px;
+	}
+	color: white;
+	text-transform: uppercase;
+}
+
+p{
+	position: absolute;
+	top: 68%;
+	width: 32%;
+	right: $outside-margin;
+	margin-top: 0;
+	z-index: 1;
+	font: {
+		family: $font-accent;
+		weight: normal;
+		size: $font-nav;
+	}
+	color: white;
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+.explore {
+	button{
+	position: absolute;
+	width: 80px * 1.5;
+	height: 24px * 1.5;
+	top: 74%;
+	right: $outside-margin;
+	background-color: transparent;
+	outline: $color-accent solid $button-stroke;
+	padding: .7vh 1vw .5vh 1vw;
+	border: none;
+	text-align: center;
+	letter-spacing: 1px;
+	font-family: $font-stack;
+	color: $color-accent;
+	size: 12px;
+	}
+	button:hover {
+		background-color: $color-accent;
+		color: white;
+	}
+}
+
+
+
+

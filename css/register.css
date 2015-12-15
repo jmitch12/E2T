@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700,400|PT+Serif:400,400italic,700italic,700|PT+Serif+Caption:400,400italic);
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#head {
+  background-color: #3d3334;
+  position: absolute;
+  left: 33.5vw;
+  top: 18vh;
+}
+
+#head img {
+  width: 400px;
+  padding: 1.7em 2em .5em 2em;
+}
+
+form {
+  position: relative;
+  top: 34.5vh;
+  left: 33.5vw;
+  width: 400px;
+  height: 315px;
+  /*margin: 25px auto;*/
+  padding: 24px 0px 24px 24px;
+  color: #392f31;
+  background: #88b067;
+  opacity: .95;
+  margin: 0;
+}
+
+input, textarea {
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+}
+
+input {
+  padding: 1.25em .625em;
+  border: 1px solid transparent;
+  width: 93%;
+  height: 40px;
+}
+
+.login .button {
+  background-color: #392f31;
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  color: white;
+}
+
+.register {
+  position: absolute;
+  top: 68vh;
+  left: 41vw;
+  display: inline;
+  width: 30vw;
+}
+
+.register h6 {
+  position: relative;
+  top: 8vh;
+  font-family: "PT Serif", "Georgia", sans-serif;
+  font-size: 14px;
+  color: #3d3334;
+  padding: none;
+  margin: 0;
+}
+
+.register a {
+  position: relative;
+  left: 11vw;
+  top: 5.5vh;
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  color: white;
+  padding: none;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.register a:hover {
+  color: #3d3334;
+}
