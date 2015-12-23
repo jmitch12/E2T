@@ -6,3 +6,4 @@ USE `E2T`;
 GRANT ALL PRIVILEGES ON E2T.* TO 'the_user'@'localhost' IDENTIFIED BY 'the_password';
 
 source user.sql;
+source recipe.sql;

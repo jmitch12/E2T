@@ -60,6 +60,26 @@ body {
   color: #88b067;
 }
 
+.account p {
+  position: absolute;
+  top: 5.4%;
+  right: 11%;
+  color: white;
+  letter-spacing: 1px;
+  font-family: "PT Serif", "Georgia", sans-serif;
+  font-color: white;
+  font-size: 12px;
+}
+.account a {
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #88b067;
+}
+.account a:hover {
+  color: white;
+}
+
 .login {
   font-family: "Montserrat", "Bebas Neue", sans-serif;
 }
@@ -128,4 +148,69 @@ p {
 .explore button:hover {
   background-color: #88b067;
   color: white;
+}
+
+.back {
+  position: absolute;
+  background-color: #88b067;
+  opacity: 0.5;
+  width: 40vw;
+  margin-left: 3%;
+}
+
+.featured {
+  z-index: -100;
+  position: absolute;
+  top: 11%;
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+  width: 100vw;
+}
+
+.featured img {
+  width: 100vw;
+}
+
+.back {
+  z-index: 100;
+  position: relative;
+  top: 340px;
+  background-color: #88b067;
+  opacity: 0.9;
+  width: 18vw;
+  height: 40vh;
+  padding-left: 3%;
+  margin-left: 9%;
+}
+
+.navigation {
+  position: absolute;
+  top: 102vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navigation ul {
+  width: 97%;
+  list-style: none;
+  padding: 0;
+  /*width: calc(80vw + 30px); /*do math*/
+  margin-left: 3%;
+}
+
+.navigation li {
+  width: 23vw;
+  height: 23vw;
+  margin: 3px 3px 0 0;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.navigation img {
+  height: 23vw;
+}
+
+.navigation img:hover {
+  opacity: 0.5;
 }

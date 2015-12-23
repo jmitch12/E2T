@@ -1,4 +1,5 @@
-<?
+<?php
+
 session_start();
 
 if (isset($_SESSION['valid'])) {
@@ -33,26 +34,23 @@ $username = select("username", "user", "username", $_SESSION['username']);
 
     <div id="nav">
         <nav>
-            <a href="">Places</a>
-            <a href="">Recipes</a>
+            <a href="places.php">Places</a>
+            <a href="recipepage.php">Recipes</a>
             <a href="">Tips</a>
-            <a href="">About</a>
         </nav>
     </div>
-    <div class="user">
-        <p>Hello, <strong><?php echo $username; ?></strong></p>
+    <div class="account">
+        <p>Hello, <strong><a href="account.php"><?php echo $username;?></a>!</strong></p>  
     </div>
     <div class="login">
         <a href="logout.php"><button>LOGOUT</button></a>
     </div>
     <!-- <a href=""><div id="article"></div></a> -->
     <h1>petit déjeuner</h1>
-    <p>Rump tenderloin ribeye cupim shoulder ham.</p>
+    <p>The city of lights and its delicious pastries</p>
     <div class="explore">
         <a href=""><button>EXPLORE</button></a>
     </div>
     
-
-
 </body>
 </html>

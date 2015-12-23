@@ -20,4 +20,4 @@ define("DBHOST", "localhost");
 define("DBUSER", "the_user");
 define("DBPASS", "the_password");
 
-$base_url = dirname(__FILE__);
+$base_url = dirname(__USER__);

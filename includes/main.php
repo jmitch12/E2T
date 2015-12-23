@@ -1,26 +1,7 @@
 <?php
-/**
- * Contains functions used for registering new users, authenticating the login
- * protocol for existing users, and working with files.
- *
- * PHP version 5.3.28
- *
- * @category Web_App
- * @package  Web_App
- * @author   Roy Vanegas <roy@thecodeeducators.com>
- * @license  https://gnu.org/licenses/gpl.html GNU General Public License
- * @link     https://bitbucket.org/code-warrior/web-app/
- */
 
-/**
- * WHITELIST
- *
- * Returns true if this white list verifies its predefined variables against a
- * $_POST variables’ form values, or, false otherwise.
- *
- * @access public
- * @return Boolean representing the valid or invalid nature of this white list
- */
+require_once "includes/config.php";
+
 function whiteList()
 {
     /**
@@ -138,7 +119,7 @@ function doesUserExist($username)
  * @access public
  * @return void
  */
-function registerNewUser($username, $password)
+function registerNewUser($username, $password, $location)
 {
     try {
         include_once "config.php";
@@ -150,15 +131,16 @@ function registerNewUser($username, $password)
         );
 
         $statement = $connection -> prepare(
-            "INSERT INTO user (username,salt,password) " .
-            "VALUES (:username,:salt,:password)"
+            "INSERT INTO user (username,salt,password,location) " .
+            "VALUES (:username,:salt,:password,:location)"
         );
 
         $statement -> execute(
             array(
                 'username' => $username,
                 'salt'     => $salt,
-                'password' => md5($password . $salt)
+                'password' => md5($password . $salt),
+                'location' => $location,
             )
         );
 
@@ -222,98 +204,99 @@ function authenticateUser($username, $password)
     }
 }
 
-/**
- * INSERT NEW FILE
+
+  /*INSERT NEW FILE
+ 
+  Inserts into the file table a file $name with a MIME $type residing at a certain
+  $path uploaded by $username.
+ 
+  @param String $username is the owner of the file.
+  @param String $path     is the path to the folder containing the file.
+  @param String $name     is the filename.
+  @param String $type     is the MIME type of the file.
  *
- * Inserts into the file table a file $name with a MIME $type residing at a certain
- * $path uploaded by $username.
- *
- * @param String $username is the owner of the file.
- * @param String $path     is the path to the folder containing the file.
- * @param String $name     is the filename.
- * @param String $type     is the MIME type of the file.
- *
- * @access pubic
+  @access public
  * @return void
  */
-// function insertNewFile($username, $path, $name, $type)
-// {
-//     try {
-//         include_once "config.php";
 
-//         $connection = new PDO(
-//             "mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS
-//         );
+function insertNewFile($username, $path, $name, $type)
+{
+    try {
+        include_once "config.php";
 
-//         $statement = $connection -> prepare(
-//             "INSERT INTO file (username,path,name,format) " .
-//             "VALUES (:username,:path,:name,:format)"
-//         );
+        $connection = new PDO(
+            "mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS
+        );
 
-//         $statement -> execute(
-//             array(
-//                 'username' => $username,
-//                 'path'     => $path,
-//                 'name'     => $name,
-//                 'format'   => $type
-//             )
-//         );
+        $statement = $connection -> prepare(
+            "INSERT INTO file (username,path,name,format) " .
+            "VALUES (:username,:path,:name,:format)"
+        );
 
-//         $statement = null;
-//     } catch(PDOException $e) {
-//         echo "<div>Error thrown in <code>insertNewFile</code></div>";
-//         echo $e -> getMessage();
+        $statement -> execute(
+            array(
+                'username' => $username,
+                'path'     => $path,
+                'name'     => $name,
+                'format'   => $type
+            )
+        );
 
-//         exit;
-//     }
-// }
+        $statement = null;
+    } catch(PDOException $e) {
+        echo "<div>Error thrown in <code>insertNewFile</code></div>";
+        echo $e -> getMessage();
 
-/**
- * GET ALL FILE LINKS FOR
+        exit;
+    }
+}
+
+
+ /* GET ALL FILE LINKS FOR
  *
  * Returns an array of file names uploaded by $username.
  *
  * @param String $username of user for whom file names are being retrieved.
  *
  * @access public
- * @return array of name fields from file table representing file names.
- */
-// function getAllFileLinksFor($username)
-// {
-//     try {
-//         include_once "config.php";
+ * @return array of name fields from file table representing file names. */
+ 
+function getAllFileLinksFor($username)
+{
+    try {
+        include_once "config.php";
 
-//         $db = new PDO(
-//             "mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS
-//         );
+        $db = new PDO(
+            "mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS
+        );
 
-//         $statement = $db -> prepare(
-//             "SELECT name FROM file WHERE username = :username"
-//         );
+        $statement = $db -> prepare(
+            "SELECT name FROM file WHERE username = :username"
+        );
 
-//         $statement -> execute(array('username' => $username));
+        $statement -> execute(array('username' => $username));
 
-//         $index = 0;
+        $index = 0;
 
-//         while ($row = $statement -> fetch()) {
-//             $links[$index++] = $row['name'];
-//         }
+        while ($row = $statement -> fetch()) {
+            $links[$index++] = $row['name'];
+        }
 
-//         $statement = null;
+        $statement = null;
 
-//         if (!isset($links)) {
-//             $links = 0;
-//         }
+        if (!isset($links)) {
+            $links = 0;
+        }
 
-//         return $links;
+        return $links;
 
-//     } catch(PDOException $e) {
-//         echo "<div>Error thrown in <code>getAllFileLinksFor</code></div>";
-//         echo $e -> getMessage();
+    } catch(PDOException $e) {
+        echo "<div>Error thrown in <code>getAllFileLinksFor</code></div>";
+        echo $e -> getMessage();
 
-//         exit;
-//     }
-// }
+        exit;
+    }
+}
 
 // /**
 //  * DELETE FILE
@@ -327,8 +310,48 @@ function authenticateUser($username, $password)
 //  *
 //  * @access public
 //  * @return void
-//  */
-// function deleteFile($filename)
+
+function deleteFile($filename)
+{
+    unlink($filename);
+}
+
+//Recipe
+
+// function populateRecipe($title, $subtitle)
 // {
-//     unlink($filename);
+// try {
+//         include_once "config.php";
+
+//         $db = new PDO(
+//             "mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS
+//         );
+
+//         $statement = $db -> prepare(
+//             "SELECT * FROM recipe"
+//         );
+
+//         $statement -> execute(array('recipe' => $recipe));
+
+//         $index = 0;
+
+//         while ($row = $statement -> fetch()) {
+//             $title[$index++] = $row['title'];
+//             $subtitle[$index++] = $row['subtitle'];
+//         }
+
+//         $statement = null;
+
+//         if (!isset($title)) {
+//             $title = 0;
+//         }
+
+//         return $title;
+
+//     } catch(PDOException $e) {
+//         echo "<div>Error thrown in <code>populateRecipe</code></div>";
+//         echo $e -> getMessage();
+
+//         exit;
+//     }
 // }

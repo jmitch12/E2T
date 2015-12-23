@@ -1,0 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700,400|PT+Serif:400,400italic,700italic,700|PT+Serif+Caption:400,400italic);
+.success p {
+  font-family: "PT Serif", "Georgia", sans-serif;
+  color: white;
+}

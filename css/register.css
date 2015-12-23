@@ -18,7 +18,7 @@ body {
 }
 
 form {
-  position: relative;
+  position: fixed;
   top: 34.5vh;
   left: 33.5vw;
   width: 400px;
@@ -33,10 +33,11 @@ form {
 
 input, textarea {
   font-family: "Montserrat", "Bebas Neue", sans-serif;
+  outline: none;
 }
 
 input {
-  padding: 1.25em .625em;
+  padding: 1.95em .625em;
   border: 1px solid transparent;
   width: 93%;
   height: 40px;
@@ -45,7 +46,9 @@ input {
 .login .button {
   background-color: #392f31;
   font-family: "Montserrat", "Bebas Neue", sans-serif;
+  text-transform: uppercase;
   color: white;
+  padding-top: 10px;
 }
 
 .register {
@@ -79,4 +82,12 @@ input {
 
 .register a:hover {
   color: #3d3334;
+}
+
+.success p {
+  margin-top: 100px;
+  margin-left: 20vw;
+  font-family: "PT Serif", "Georgia", sans-serif;
+  color: white;
+  font-size: 50px;
 }

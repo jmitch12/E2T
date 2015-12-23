@@ -4,6 +4,24 @@ session_start();
 
 require_once "includes/main.php";
 
+// if (isset($_SESSION["valid"])) {
+//     if (1 == $_SESSION["valid"]) {
+//         header("Location: home.php");
+//     }
+// }
+
+if (isset($_GET['action'])) {
+    if ("login" == $_GET['action']) {
+        $action_value = "./login.php?action=login";
+        $subheading = $button_value = "Login";
+    } else {
+        if ("register" == $_GET['action']) {
+            $action_value = "./register.php?action=register";
+            $subheading = $button_value = "Register";
+        }
+    }
+}
+
 if (isset($_POST["submitted"])) {
     if (1 == $_POST["submitted"]) {
         if (whiteList()) {
@@ -16,7 +34,7 @@ if (isset($_POST["submitted"])) {
                 if (authenticateUser($username, $password)) {
                     $_SESSION['valid'] = true;
                     $_SESSION['username'] = $username;
-                    header("Location: index.php");
+                    header("Location: home.php");
                 } else {
                     header("Location: error.php?message_type=login_error");
                 }
@@ -24,6 +42,7 @@ if (isset($_POST["submitted"])) {
         }
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +76,7 @@ if (isset($_POST["submitted"])) {
     </div>
     <div class="register">
         <h6>Don't have an account?</h6>
-        <a href="register.php">Sign Up</a>
+        <a href="./register.php?action=register">Sign Up</a>
     </div>
 
     <script src="js/index.js"></script>

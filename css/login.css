@@ -32,6 +32,7 @@ form {
 
 input, textarea {
   font-family: "Montserrat", "Bebas Neue", sans-serif;
+  outline: none;
 }
 
 input {
@@ -43,6 +44,7 @@ input {
 .login .button {
   background-color: #3d3334;
   font-family: "Montserrat", "Bebas Neue", sans-serif;
+  text-transform: uppercase;
   color: white;
 }
 

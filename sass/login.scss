@@ -29,10 +29,12 @@ form {
 	background: $color-accent;
 	opacity: .95;
 	margin: 0;
+
 }
 
 input, textarea {
   	font-family: $font-stack;
+  	outline: none;
 }
 
 input {
@@ -45,6 +47,7 @@ input {
 .login .button{
 	background-color: $color-base;
 	font-family: $font-stack;
+	text-transform: uppercase;
 	color: white;
 }
 

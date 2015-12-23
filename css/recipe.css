@@ -1,0 +1,527 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700,400|PT+Serif:400,400italic,700italic,700|PT+Serif+Caption:400,400italic);
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #584f50;
+  background-repeat: no-repeat;
+}
+
+#screen {
+  position: absolute;
+  height: 13.2%;
+  width: 100%;
+  background-color: #3d3334;
+  z-index: -99;
+}
+
+#logo {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  width: 5%;
+}
+#logo img {
+  width: 100%;
+}
+
+#nav {
+  position: absolute;
+  top: 5.3%;
+  left: 11%;
+  margin: 0;
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  font-color: white;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#nav a {
+  text-decoration: none;
+  color: white;
+  padding-right: 1vw;
+}
+#nav a:hover {
+  color: #88b067;
+}
+
+.user a {
+  position: absolute;
+  top: 5.4%;
+  right: 11%;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  font-color: white;
+  font-size: 12px;
+}
+.user a:hover {
+  color: #88b067;
+}
+
+.account p {
+  position: absolute;
+  top: 5.4%;
+  right: 11%;
+  color: white;
+  letter-spacing: 1px;
+  font-family: "PT Serif", "Georgia", sans-serif;
+  font-color: white;
+  font-size: 12px;
+}
+.account a {
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #88b067;
+}
+.account a:hover {
+  color: white;
+}
+
+.login {
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+}
+.login button {
+  position: absolute;
+  width: 80px;
+  height: 24px;
+  top: 4.7%;
+  right: 3%;
+  background-color: #88b067;
+  padding: .7vh 1vw .5vh 1vw;
+  border: none;
+  text-align: center;
+  letter-spacing: 1px;
+  color: white;
+  size: 12px;
+}
+.login button:hover {
+  opacity: 0.8;
+}
+
+h1 {
+  position: absolute;
+  top: 58%;
+  right: 3%;
+  margin-top: 0;
+  z-index: 1;
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  font-weight: normal;
+  font-size: 56px;
+  color: white;
+  text-transform: uppercase;
+}
+
+p {
+  position: absolute;
+  top: 68%;
+  width: 32%;
+  right: 3%;
+  margin-top: 0;
+  z-index: 1;
+  font-family: "PT Serif", "Georgia", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: white;
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+.explore button {
+  position: absolute;
+  width: 120px;
+  height: 36px;
+  top: 74%;
+  right: 3%;
+  background-color: transparent;
+  outline: #88b067 solid 2px;
+  padding: .7vh 1vw .5vh 1vw;
+  border: none;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  color: #88b067;
+  size: 12px;
+}
+.explore button:hover {
+  background-color: #88b067;
+  color: white;
+}
+
+.back {
+  position: absolute;
+  background-color: #88b067;
+  opacity: 0.5;
+  width: 40vw;
+  margin-left: 3%;
+}
+
+.featured {
+  z-index: -100;
+  position: absolute;
+  top: 11%;
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+  width: 100vw;
+}
+
+.featured img {
+  width: 100vw;
+  height: 90vh;
+}
+
+.subfeature {
+  position: absolute;
+  top: 372px;
+  left: 11.4%;
+  z-index: 3;
+  width: 16vw;
+  color: white;
+  text-align: center;
+  font-family: "PT Serif", "Georgia", sans-serif;
+  font-size: 21px;
+}
+
+.back {
+  z-index: 1;
+  position: relative;
+  top: 340px;
+  background-color: #88b067;
+  opacity: 0.9;
+  width: 18vw;
+  height: 35vh;
+  padding-left: 3%;
+  margin-left: 9%;
+}
+
+.accent {
+  position: relative;
+  top: 45px;
+  width: 8vw;
+  margin-left: 5.4%;
+  z-index: 5;
+}
+
+.arrow {
+  position: relative;
+  top: 48vh;
+  left: 35vw;
+  width: 4vw;
+  z-index: 5;
+}
+
+.navigation {
+  position: absolute;
+  top: 102vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navigation ul {
+  width: 97%;
+  list-style: none;
+  padding: 0;
+  /*width: calc(80vw + 30px); /*do math*/
+  margin-left: 3%;
+}
+
+.navigation li {
+  width: 23vw;
+  height: 23vw;
+  margin: 3px 3px 0 0;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.navigation img {
+  height: 23vw;
+}
+
+.navigation img:hover {
+  opacity: 0.5;
+}
+
+#recipes {
+  position: absolute;
+  top: 13vh;
+  width: 25vw;
+  margin-left: 3%;
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 36px;
+}
+
+#browse {
+  position: absolute;
+  top: 21vh;
+  float: right;
+  right: 4%;
+  font-family: "PT Serif", "Georgia", sans-serif;
+  color: #88b067;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+#browse:hover {
+  color: white;
+}
+
+.saved {
+  position: absolute;
+  top: 22vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.saved ul {
+  width: 95%;
+  list-style: none;
+  padding: 0;
+  /*width: calc(80vw + 30px); /*do math*/
+  margin-left: 3%;
+}
+
+.saved li {
+  width: 23vw;
+  height: 23vw;
+  margin: 3px 3px 0 0;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.saved img {
+  height: 23vw;
+}
+
+.saved img:hover {
+  opacity: 0.5;
+}
+
+#instagram h1 {
+  position: absolute;
+  top: 119.5vh;
+  width: 40vw;
+  margin-left: 3%;
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 36px;
+  text-align: right;
+}
+
+#instafeed {
+  position: absolute;
+  width: 95vw;
+  left: 3%;
+  top: 128vh;
+}
+
+#recipetitle h1 {
+  position: absolute;
+  top: 55%;
+  right: 6%;
+  margin-top: 0;
+  z-index: 1;
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  font-weight: normal;
+  font-size: 56px;
+  color: white;
+  text-transform: uppercase;
+}
+
+#recipetitle p {
+  position: absolute;
+  top: 65%;
+  width: 32%;
+  right: 6%;
+  margin-top: 0;
+  z-index: 1;
+  font-family: "PT Serif", "Georgia", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: white;
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+#story p {
+  position: absolute;
+  top: 92.5vh;
+  width: 58vw;
+  font-family: "PT Serif", "Georgia", sans-serif;
+  text-align: left;
+  margin-right: 3%;
+}
+
+.featured2 {
+  z-index: -100;
+  position: absolute;
+  top: 11%;
+}
+
+.featured2 img {
+  width: 100vw;
+}
+
+.subfeature2 {
+  position: absolute;
+  top: 627px;
+  left: 11.4%;
+  z-index: 3;
+  width: 16vw;
+  color: white;
+  text-align: center;
+  font-family: "PT Serif", "Georgia", sans-serif;
+  font-size: 22px;
+}
+
+.back2 {
+  z-index: 1;
+  position: relative;
+  top: 600px;
+  background-color: #88b067;
+  opacity: 0.9;
+  width: 18vw;
+  height: 26vh;
+  padding-left: 3%;
+  margin-left: 9%;
+}
+
+.accent2 {
+  position: relative;
+  top: 383px;
+  width: 8vw;
+  margin-left: 5.4%;
+  z-index: 5;
+}
+
+#back3 {
+  position: relative;
+  top: 81vh;
+  background-color: #3d3334;
+  width: 100vw;
+  height: 20vh;
+  z-index: 5;
+}
+
+#listen h1 {
+  position: absolute;
+  top: 128vh;
+  right: 54%;
+  margin-top: 0;
+  z-index: 7;
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  font-weight: normal;
+  font-size: 56px;
+  color: white;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+#play img {
+  position: absolute;
+  top: 128vh;
+  left: 52.5%;
+  z-index: 7;
+  width: 5vw;
+}
+
+#watch img {
+  position: absolute;
+  top: 128vh;
+  right: 32vw;
+  z-index: 7;
+  width: 5vw;
+}
+
+#music img {
+  position: absolute;
+  top: 130vh;
+  right: 6%;
+  z-index: 7;
+  width: 5vw;
+}
+
+#read img {
+  position: absolute;
+  top: 128vh;
+  right: 20vw;
+  z-index: 7;
+  width: 5vw;
+}
+
+#play img:hover {
+  opacity: .8;
+}
+
+#watch img:hover {
+  opacity: .8;
+}
+
+.ingredients {
+  position: absolute;
+  top: 1150px;
+  color: white;
+  margin-left: 6%;
+  margin-bottom: 60px;
+}
+
+.ingredients h5 {
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.ingredients ul {
+  list-style: none;
+  font-family: "PT Serif", "Georgia", sans-serif;
+}
+
+.serving p {
+  position: absolute;
+  top: 1255px;
+  width: 40vw;
+  color: white;
+  margin-right: 24%;
+  text-align: left;
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+}
+
+.prepare h5 {
+  font-family: "Montserrat", "Bebas Neue", sans-serif;
+  font-size: 30px;
+  width: 20vw;
+  position: absolute;
+  top: 1150px;
+  color: white;
+  margin-left: 33%;
+}
+
+.prepare p {
+  font-family: "PT Serif", "Georgia", sans-serif;
+  width: 34vw;
+  position: absolute;
+  top: 1285px;
+  color: white;
+  margin-right: 30%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+#product {
+  width: 20vw;
+}
+
+#product img {
+  position: absolute;
+  width: 20vw;
+  top: 1202px;
+  margin-left: 73.5%;
+}
+
+.subfeature a {
+  text-decoration: none;
+  color: white;
+}

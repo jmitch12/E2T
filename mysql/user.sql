@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS `user` (
-   `username` VARCHAR(20) NOT NULL PRIMARY KEY,
-   `password` CHAR(32) NOT NULL,
-   `salt`     CHAR(8) NOT NULL,
-   `email`    VARCHAR(100) NOT NULL,
-   `location` VARCHAR(100) NOT NULL
+   `username` 	VARCHAR(20) NOT NULL PRIMARY KEY,
+   `password` 	CHAR(32) NOT NULL,
+   `salt`     	CHAR(8) NOT NULL,
+   `city`		VARCHAR(50) NOT NULL,
+   `location` 	VARCHAR(100) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

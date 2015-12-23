@@ -70,6 +70,30 @@ body {
  	}
 }
 
+.account{
+	p{
+		position: absolute;
+		top: $outside-margin +2.4%;
+		right: $outside-margin + 8%;
+		color: white;
+		letter-spacing: 1px;
+		font: {
+			family: $font-accent;
+			color: white;
+			size: 12px;
+			}
+	}	
+	a{
+		font-family: $font-stack;
+		text-decoration: underline;
+		text-transform: uppercase;
+		color: $color-accent;
+	}
+	a:hover {
+ 		color: white;
+ 	}
+}
+
 .login {
 	font-family: $font-stack;
 	button{
@@ -90,6 +114,8 @@ body {
 		opacity: 0.8;
 	}
 }
+
+// Homepage
 
 h1{
 	position: absolute;
@@ -146,6 +172,392 @@ p{
 	}
 }
 
+// Places page
 
+.back{
+	position:absolute;
+	background-color: $color-accent;
+	opacity: 0.5;
+	width: 40vw;
+	margin-left: $outside-margin;
+}
 
+.featured{
+	z-index: -100;
+	position:absolute;
+	top: $outside-margin + 8%;
+	font: {
+		family: $font-stack;
+		weight: normal;
+		size: 40px;
+	}
+	width: 100vw;
+}
+
+.featured img{
+	width: 100vw;
+	height: 90vh;
+}
+
+.subfeature{
+	position:absolute;
+	top:372px;
+	left: $outside-margin*3.8;
+	z-index:3;
+	width: 16vw;
+	color: white;
+	text-align: center;
+	font-family: $font-accent;
+	font-size: $font-sub;
+}
+
+.back{
+	z-index: 1;
+	position:relative;
+	top: 340px;
+	background-color: $color-accent;
+	opacity: 0.9;
+	width: 18vw;
+	height: 35vh;
+	padding-left: $outside-margin;
+	margin-left: $outside-margin *3;
+}
+
+.accent{
+	position:relative;
+	top: 45px;
+	width: 8vw;
+	margin-left:$outside-margin * 1.8;
+	z-index: 5;
+}
+
+.arrow{
+	position:relative;
+	top:48vh;
+	left: 35vw;
+	width:4vw;
+	z-index:5;
+}
+
+.navigation{
+	position: absolute;
+	top:102vh;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.navigation ul{
+	width:100% - $outside-margin;
+	list-style: none;
+	padding: 0;
+	/*width: calc(80vw + 30px); /*do math*/
+	margin-left:$outside-margin;
+
+}
+
+.navigation li{
+	width:23vw;
+	height:23vw;
+	margin:3px 3px 0 0;
+	display:inline-block;
+	overflow:hidden;
+}
+
+.navigation img{
+	height: 23vw;
+}
+
+.navigation img:hover{
+	opacity: 0.5;
+}
+
+//Account page
+
+#recipes{
+	position:absolute;
+	top: 13vh;
+	width: 25vw;
+	margin-left: $outside-margin;
+	font-family: $font-stack;
+	color: white;
+	font-size: 36px;
+}
+
+#browse{
+	position:absolute;
+	top: 21vh;
+	float: right;
+	right: $outside-margin + 1%;
+	font-family: $font-accent;
+	color: $color-accent;
+	font-size: 14px;
+	text-decoration:none;
+}
+
+#browse:hover{
+	color: white;
+}
+
+.saved{
+	position: absolute;
+	top:22vh;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.saved ul{
+	width:95%;
+	list-style: none;
+	padding: 0;
+	/*width: calc(80vw + 30px); /*do math*/
+	margin-left:$outside-margin;
+}
+
+.saved li{
+	width:23vw;
+	height:23vw;
+	margin:3px 3px 0 0;
+	display:inline-block;
+	overflow:hidden;
+}
+
+.saved img{
+	height: 23vw;
+}
+
+.saved img:hover{
+	opacity: 0.5;
+}
+
+#instagram h1{
+	position:absolute;
+	top: 119.5vh;
+	width: 40vw;
+	margin-left: $outside-margin;
+	font-family: $font-stack;
+	color: white;
+	font-size: 36px;
+	text-align:right;
+}
+
+#instafeed{
+	position: absolute;
+	width: 95vw;
+	left: $outside-margin;
+	top:128vh;
+
+}
+
+// Recipe preparation page
+
+#recipetitle h1{
+	position: absolute;
+	top: 55%;
+	right: $outside-margin * 2;
+	margin-top: 0;
+	z-index: 1;
+	font: {
+		family: $font-stack;
+		weight: normal;
+		size: 56px;
+	}
+	color: white;
+	text-transform: uppercase;
+}
+
+#recipetitle p{
+	position: absolute;
+	top: 65%;
+	width: 32%;
+	right: $outside-margin * 2;
+	margin-top: 0;
+	z-index: 1;
+	font: {
+		family: $font-accent;
+		weight: normal;
+		size: $font-nav;
+	}
+	color: white;
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+#story p{
+	position:absolute;
+	top: 92.5vh;
+	width: 58vw;
+	font-family: $font-accent;
+	text-align:left;
+	margin-right: $outside-margin;
+}
+
+.featured2 {
+	z-index: -100;
+	position:absolute;
+	top: $outside-margin + 8%;
+}
+
+.featured2 img{
+	width: 100vw;
+}
+
+.subfeature2{
+	position:absolute;
+	top:627px;
+	left: $outside-margin*3.8;
+	z-index:3;
+	width: 16vw;
+	color: white;
+	text-align: center;
+	font-family: $font-accent;
+	font-size: $font-sub + 1px;
+}
+.back2{
+	z-index: 1;
+	position:relative;
+	top: 600px;
+	background-color: $color-accent;
+	opacity: 0.9;
+	width: 18vw;
+	height: 26vh;
+	padding-left: $outside-margin;
+	margin-left: $outside-margin *3;
+}
+
+.accent2{
+	position:relative;
+	top: 383px;
+	width: 8vw;
+	margin-left:$outside-margin * 1.8;
+	z-index: 5;
+}
+
+#back3{
+	position:relative;
+	top: 81vh;
+	background-color: $color-base;
+	width:100vw;
+	height: 20vh;
+	z-index: 5;
+}
+
+#listen h1{
+	position: absolute;
+	top: 128vh;
+	right: $outside-margin * 18;
+	margin-top: 0;
+	z-index: 7;
+	font: {
+		family: $font-stack;
+		weight: normal;
+		size: 56px;
+	}
+	color: white;
+	text-transform: uppercase;
+	text-align:right;
+}
+
+#play img{
+	position:absolute;
+	top: 128vh;
+	left: $outside-margin *17.5;
+	z-index:7;
+	width: 5vw;
+}
+
+#watch img{
+	position:absolute;
+	top: 128vh;
+	right: 32vw;
+	z-index:7;
+	width: 5vw;
+}
+
+#music img{
+	position:absolute;
+	top: 130vh;
+	right: $outside-margin *2;
+	z-index:7;
+	width: 5vw;
+}
+
+#read img{
+	position:absolute;
+	top: 128vh;
+	right: 20vw;
+	z-index:7;
+	width: 5vw;
+}
+
+#play img:hover{
+	opacity: .8;
+}
+
+#watch img:hover{
+	opacity: .8;
+}
+
+.ingredients{
+	position: absolute;
+	top: 1150px;
+	color:white;
+	margin-left: $outside-margin*2;
+	margin-bottom: 60px;
+}
+.ingredients h5{
+	font-family:$font-stack;
+	font-size: 30px;
+	margin-bottom: 0;
+}
+.ingredients ul{
+	list-style:none;
+	font-family: $font-accent;
+}
+
+.serving p{
+	position: absolute;
+	top: 1255px;
+	width: 40vw;
+	color:white;
+	margin-right: $outside-margin*8;
+	text-align: left;
+	font-family: $font-stack;
+}
+
+.prepare h5{
+	font-family:$font-stack;
+	font-size: 30px;
+	width: 20vw;
+	position: absolute;
+	top: 1150px;
+	color:white;
+	margin-left: $outside-margin*11;
+}
+
+.prepare p{
+	font-family: $font-accent;
+	width: 34vw;
+	position: absolute;
+	top: 1285px;
+	color:white;
+	margin-right: $outside-margin*10;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+#product{
+	width:20vw;
+}
+
+#product img{
+	position:absolute;
+	width: 20vw;
+	top: 1202px;
+	margin-left: $outside-margin*24.5;
+}
+
+.subfeature a{
+	text-decoration: none;
+	color: white;
+}
 
