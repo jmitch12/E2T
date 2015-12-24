@@ -36,7 +36,6 @@ $city = select("city", "user", "username", $_SESSION['username']);
         <nav>
             <a href="places.php">Places</a>
             <a href="recipepage.php">Recipes</a>
-            <a href="">Tips</a>
         </nav>
     </div>
     <div class="account">
@@ -53,28 +52,12 @@ $city = select("city", "user", "username", $_SESSION['username']);
     <div class="saved">
         <ul>
             <li><img src="image/soba.jpg"></li>
-            <li><img src="image/Brazil.jpg" title="BRAZIL"></li>
-            <li><img src="image/India.jpg" title="INDIA"></li>
-            <li><img src="image/Italy.jpg" title="ITALY"></li>
-            <li><img src="image/Spain2.jpg" title="SPAIN"></li>
-            <li><img src="image/Parigi.jpg" title="FRANCE"></li>
-            <li><img src="image/Phillipines.jpg" title="PHILLIPINES"></li>
-            <li><img src="image/Thailand1.jpg" title="THAILAND"></li>
+            <li><img src="image/tikka.jpg" title="BRAZIL"></li>
+            <li><img src="image/taco.jpg" title="INDIA"></li>
+            <li><img src="image/chips.jpg" title="ITALY"></li>
         </ul>
     </div>
 
-  <!--   <?php
-        for ($index = 0; $index < $amount_of_links; $index++) {
-        echo "<dd><a href=\"uploads/$links[$index]\">$links[$index]</a></dd>\n";
-        }
-    ?>
-
-    <section id="upload">
-        <form method="post" action="upload.php" enctype="multipart/form-data">
-            <p><input type="file" name="document"></p>
-            <p><input type="submit" id="send_file" value="Send File"></p>
-        </form>
-    </section> -->
             
     <div id="instagram">
         <h1>EXPLORE YOUR LOCATION</h1>
@@ -87,7 +70,7 @@ $city = select("city", "user", "username", $_SESSION['username']);
     <script type="text/javascript">
         var feed = new Instafeed({
             get: 'tagged',
-            tagName: 'nycfood',
+            tagName: '<?php echo $city;?>foodandtravel',
             limit: '8',
             clientId: 'bc2fe5119dc94167b4b3fb33ee7fbe55'
         });

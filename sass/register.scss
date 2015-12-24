@@ -38,7 +38,7 @@ input, textarea {
 }
 
 input {
-  	padding: 1.95em .625em;
+  	padding: 1.25em .625em;
   	border: 1px solid transparent;
   	width: 93%;
   	height: 40px;
@@ -86,9 +86,9 @@ input {
 }
 
 .success p{
-	margin-top: 100px;
-	margin-left: 20vw;
+	margin-top: 20px;
+	margin-left: $outside-margin;
 	font-family: $font-accent;
 	color: white;
-	font-size: 50px;
+	font-size: 23px;
 }

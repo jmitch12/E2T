@@ -56,7 +56,7 @@ $username = select("username", "user", "username", $_SESSION['username']);
 
     <img class="arrow" src="image/arrow.png">
 
-      <div class="navigation">
+    <div class="navigation">
         <ul>
             <li><img src="image/brazil.png"></li>
             <li><img src="image/india.png"></li>

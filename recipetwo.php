@@ -21,7 +21,12 @@ $servings = select("servings", "recipe", "recipe_id", "2");
 $ingredients = select("ingredients", "recipe", "recipe_id", "2");
 $preparation = select("preparation", "recipe", "recipe_id", "2");
 $story = select("story", "recipe", "recipe_id", "2");
-
+$city = select("city", "recipe", "recipe_id", "2");
+$song_link = select("song_link", "recipe", "recipe_id", "2");
+$video_link = select("video_link", "recipe", "recipe_id", "2");
+$article_link = select("article_link", "recipe", "recipe_id", "2");
+$image_link = select("image_link", "recipe", "recipe_id", "2");
+$insta_link = select("insta_link", "recipe", "recipe_id", "2");
 
 ?>
 
@@ -41,7 +46,6 @@ $story = select("story", "recipe", "recipe_id", "2");
         <nav>
             <a href="places.php">Places</a>
             <a href="recipepage.php">Recipes</a>
-            <a href="">Tips</a>
         </nav>
     </div>
     <div class="account">
@@ -52,7 +56,7 @@ $story = select("story", "recipe", "recipe_id", "2");
     </div>
 
     <div class="featured2">
-        <img src="image/toast2.jpg">
+        <img src="image/tikka2.jpg">
     </div>
 
     <div id="recipetitle">
@@ -61,7 +65,7 @@ $story = select("story", "recipe", "recipe_id", "2");
     </div>
     
     <div class="subfeature2">
-        <h2>New York</h2>
+        <h2><?php echo $city;?></h2>
     </div>
     
     <div class="back2"></div>
@@ -69,7 +73,7 @@ $story = select("story", "recipe", "recipe_id", "2");
     <img class= "accent2" src="image/story2.png">
 
     <div id="story">
-        <p></p>
+        <p><?php echo $story;?></p>
     </div>
 
     <div id="back3"></div>
@@ -79,16 +83,24 @@ $story = select("story", "recipe", "recipe_id", "2");
     </div>
 
     <div id="play">
-        <img src="image/headphones.png">
+        <a href="<?php echo $song_link;?>" target="_blank"><img src="image/headphones.png"></a>
     </div>
 
     <div id="watch">
-        <img src="image/tv.png">
+        <a href="<?php echo $video_link;?>" target="_blank"><img src="image/tv.png"></a>
     </div>
 
-    <!-- <div id="music">
-        <a href=""><img src="image/game.png" title="music"></a>
-    </div> -->
+    <div id="insta">
+        <a href="<?php echo $insta_link;?>" target="_blank"><img src="image/instagram.png" title="music"></a>
+    </div>
+
+     <div id="read">
+        <a href="<?php echo $article_link;?>" target="_blank"><img src="image/read.png" title="music"></a>
+    </div>
+
+    <div id="gif">
+        <a href="<?php echo $image_link;?>" target="_blank"><img src="image/gif.png" title="music"></a>
+    </div>
 
     <div class="ingredients">
         <h5>INGREDIENTS</h5>
@@ -99,7 +111,6 @@ $story = select("story", "recipe", "recipe_id", "2");
 
     <div class="serving">
         <p>COOK TIME: <?php echo $time;?> | SERVINGS: <?php echo $servings;?></p>
-        <!-- <img src="image/plus.png"> -->
     </div>
 
     <div class="prepare">
@@ -108,7 +119,7 @@ $story = select("story", "recipe", "recipe_id", "2");
     </div>
 
     <div id="product">
-        <img src="image/toast4.jpg">
+        <img src="image/tikka3.jpg">
     </div>
 
     <script src="js/jquery-2.1.4.min.js"></script>

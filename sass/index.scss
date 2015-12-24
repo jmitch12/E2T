@@ -15,7 +15,6 @@ body {
 	height: $outside-margin * 4.4;
 	width: 100%;
 	background-color: $color-base;
-	// opacity: 0.9;
 	z-index: -99;
 }
 
@@ -250,7 +249,6 @@ p{
 	width:100% - $outside-margin;
 	list-style: none;
 	padding: 0;
-	/*width: calc(80vw + 30px); /*do math*/
 	margin-left:$outside-margin;
 
 }
@@ -306,10 +304,9 @@ p{
 }
 
 .saved ul{
-	width:95%;
+	width:100%;
 	list-style: none;
 	padding: 0;
-	/*width: calc(80vw + 30px); /*do math*/
 	margin-left:$outside-margin;
 }
 
@@ -331,7 +328,7 @@ p{
 
 #instagram h1{
 	position:absolute;
-	top: 119.5vh;
+	top: 75.5vh;
 	width: 40vw;
 	margin-left: $outside-margin;
 	font-family: $font-stack;
@@ -344,7 +341,8 @@ p{
 	position: absolute;
 	width: 95vw;
 	left: $outside-margin;
-	top:128vh;
+	top:84vh;
+	margin-bottom: $outside-margin;
 
 }
 
@@ -403,7 +401,7 @@ p{
 
 .subfeature2{
 	position:absolute;
-	top:627px;
+	top:92vh;
 	left: $outside-margin*3.8;
 	z-index:3;
 	width: 16vw;
@@ -415,7 +413,7 @@ p{
 .back2{
 	z-index: 1;
 	position:relative;
-	top: 600px;
+	top: 88vh;
 	background-color: $color-accent;
 	opacity: 0.9;
 	width: 18vw;
@@ -426,7 +424,7 @@ p{
 
 .accent2{
 	position:relative;
-	top: 383px;
+	top: 57vh;
 	width: 8vw;
 	margin-left:$outside-margin * 1.8;
 	z-index: 5;
@@ -460,33 +458,41 @@ p{
 #play img{
 	position:absolute;
 	top: 128vh;
-	left: $outside-margin *17.5;
+	left: $outside-margin *17;
 	z-index:7;
 	width: 5vw;
 }
 
 #watch img{
 	position:absolute;
-	top: 128vh;
-	right: 32vw;
+	top: 128.5vh;
+	right: 34vw;
 	z-index:7;
 	width: 5vw;
 }
 
-#music img{
+#insta img{
 	position:absolute;
-	top: 130vh;
-	right: $outside-margin *2;
+	top: 129vh;
+	right: $outside-margin *2.2;
 	z-index:7;
-	width: 5vw;
+	width: 4.5vw;
 }
 
 #read img{
 	position:absolute;
-	top: 128vh;
-	right: 20vw;
+	top: 128.5vh;
+	right: 16vw;
 	z-index:7;
 	width: 5vw;
+}
+
+#gif img{
+	position:absolute;
+	top: 129vh;
+	right: 25.5vw;
+	z-index:7;
+	width: 3.5vw;
 }
 
 #play img:hover{
@@ -497,9 +503,21 @@ p{
 	opacity: .8;
 }
 
+#insta img:hover{
+	opacity: .8;
+}
+
+#read img:hover{
+	opacity: .8;
+}
+
+#gif img:hover{
+	opacity: .8;
+}
+
 .ingredients{
 	position: absolute;
-	top: 1150px;
+	top: 143vh;
 	color:white;
 	margin-left: $outside-margin*2;
 	margin-bottom: 60px;
@@ -512,11 +530,12 @@ p{
 .ingredients ul{
 	list-style:none;
 	font-family: $font-accent;
+	line-height: 24px;
 }
 
 .serving p{
 	position: absolute;
-	top: 1255px;
+	top: 158.5vh;
 	width: 40vw;
 	color:white;
 	margin-right: $outside-margin*8;
@@ -529,7 +548,7 @@ p{
 	font-size: 30px;
 	width: 20vw;
 	position: absolute;
-	top: 1150px;
+	top: 143vh;
 	color:white;
 	margin-left: $outside-margin*11;
 }
@@ -538,11 +557,12 @@ p{
 	font-family: $font-accent;
 	width: 34vw;
 	position: absolute;
-	top: 1285px;
+	top: 163.5vh;
 	color:white;
 	margin-right: $outside-margin*10;
 	text-align: left;
 	margin-bottom: 10px;
+	line-height: 24px;
 }
 
 #product{
@@ -552,12 +572,45 @@ p{
 #product img{
 	position:absolute;
 	width: 20vw;
-	top: 1202px;
+	top: 152vh;
 	margin-left: $outside-margin*24.5;
 }
 
 .subfeature a{
 	text-decoration: none;
 	color: white;
+}
+
+//Recipes Page
+
+.navigation3{
+	position: absolute;
+	top:102vh;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.navigation3 ul{
+	width:100%;
+	list-style: none;
+	padding: 0;
+	margin-left:$outside-margin;
+
+}
+
+.navigation3 li{
+	width:23vw;
+	height:23vw;
+	margin:3px 3px 0 0;
+	display:inline-block;
+	overflow:hidden;
+}
+
+.navigation3 img{
+	height: 23vw;
+}
+
+.navigation3 img:hover{
+	opacity: 0.5;
 }
 

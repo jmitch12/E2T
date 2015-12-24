@@ -29,7 +29,6 @@ if (isset($_SESSION["valid"])) {
         <nav>
             <a href="./login.php?action=login">Places</a>
             <a href="./login.php?action=login">Recipes</a>
-            <a href="./login.php?action=login">Tips</a>
         </nav>
     </div>
     <div class="user">

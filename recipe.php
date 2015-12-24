@@ -22,7 +22,11 @@ $ingredients = select("ingredients", "recipe", "recipe_id", "1");
 $preparation = select("preparation", "recipe", "recipe_id", "1");
 $story = select("story", "recipe", "recipe_id", "1");
 $city = select("city", "recipe", "recipe_id", "1");
-
+$song_link = select("song_link", "recipe", "recipe_id", "1");
+$video_link = select("video_link", "recipe", "recipe_id", "1");
+$article_link = select("article_link", "recipe", "recipe_id", "1");
+$image_link = select("image_link", "recipe", "recipe_id", "1");
+$insta_link = select("insta_link", "recipe", "recipe_id", "1");
 
 ?>
 
@@ -31,7 +35,6 @@ $city = select("city", "recipe", "recipe_id", "1");
 <head>
     <title>Eat to Travel</title>
     <meta charset="UTF-8">
-    <!-- <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" type="text/css" href="css/recipe.css">
 </head>
 <body>
@@ -42,7 +45,6 @@ $city = select("city", "recipe", "recipe_id", "1");
         <nav>
             <a href="places.php">Places</a>
             <a href="recipepage.php">Recipes</a>
-            <a href="">Tips</a>
         </nav>
     </div>
     <div class="account">
@@ -80,19 +82,23 @@ $city = select("city", "recipe", "recipe_id", "1");
     </div>
 
     <div id="play">
-        <img src="image/headphones.png">
+        <a href="<?php echo $song_link;?>" target="_blank"><img src="image/headphones.png"></a>
     </div>
 
     <div id="watch">
-        <img src="image/tv.png">
+        <a href="<?php echo $video_link;?>" target="_blank"><img src="image/tv.png"></a>
     </div>
 
-    <div id="music">
-        <a href=""><img src="image/game.png" title="music"></a>
+    <div id="insta">
+        <a href="<?php echo $insta_link;?>" target="_blank"><img src="image/instagram.png" title="music"></a>
     </div>
 
      <div id="read">
-        <a href=""><img src="image/read.png" title="music"></a>
+        <a href="<?php echo $article_link;?>" target="_blank"><img src="image/read.png" title="music"></a>
+    </div>
+
+    <div id="gif">
+        <a href="<?php echo $image_link;?>" target="_blank"><img src="image/gif.png" title="music"></a>
     </div>
 
     <div class="ingredients">
@@ -104,7 +110,6 @@ $city = select("city", "recipe", "recipe_id", "1");
 
     <div class="serving">
         <p>COOK TIME: <?php echo $time;?> | SERVINGS: <?php echo $servings;?></p>
-        <!-- <img src="image/plus.png"> -->
     </div>
 
     <div class="prepare">

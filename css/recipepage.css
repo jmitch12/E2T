@@ -224,7 +224,6 @@ p {
   width: 97%;
   list-style: none;
   padding: 0;
-  /*width: calc(80vw + 30px); /*do math*/
   margin-left: 3%;
 }
 
@@ -280,7 +279,6 @@ p {
   width: 95%;
   list-style: none;
   padding: 0;
-  /*width: calc(80vw + 30px); /*do math*/
   margin-left: 3%;
 }
 
@@ -348,7 +346,7 @@ p {
 
 #story p {
   position: absolute;
-  top: 91vh;
+  top: 92.5vh;
   width: 58vw;
   font-family: "PT Serif", "Georgia", sans-serif;
   text-align: left;
@@ -367,31 +365,31 @@ p {
 
 .subfeature2 {
   position: absolute;
-  top: 608px;
+  top: 92vh;
   left: 11.4%;
   z-index: 3;
   width: 16vw;
   color: white;
   text-align: center;
   font-family: "PT Serif", "Georgia", sans-serif;
-  font-size: 31px;
+  font-size: 22px;
 }
 
 .back2 {
   z-index: 1;
   position: relative;
-  top: 600px;
+  top: 88vh;
   background-color: #88b067;
   opacity: 0.9;
   width: 18vw;
-  height: 23vh;
+  height: 26vh;
   padding-left: 3%;
   margin-left: 9%;
 }
 
 .accent2 {
   position: relative;
-  top: 410px;
+  top: 57vh;
   width: 8vw;
   margin-left: 5.4%;
   z-index: 5;
@@ -399,7 +397,7 @@ p {
 
 #back3 {
   position: relative;
-  top: 560px;
+  top: 81vh;
   background-color: #3d3334;
   width: 100vw;
   height: 20vh;
@@ -408,8 +406,8 @@ p {
 
 #listen h1 {
   position: absolute;
-  top: 130%;
-  right: 6%;
+  top: 128vh;
+  right: 54%;
   margin-top: 0;
   z-index: 7;
   font-family: "Montserrat", "Bebas Neue", sans-serif;
@@ -422,26 +420,42 @@ p {
 
 #play img {
   position: absolute;
-  top: 890px;
-  left: 6%;
+  top: 128vh;
+  left: 51%;
   z-index: 7;
   width: 5vw;
 }
 
 #watch img {
   position: absolute;
-  top: 890px;
-  right: 56vw;
+  top: 128.5vh;
+  right: 34vw;
   z-index: 7;
   width: 5vw;
 }
 
-#music img {
+#insta img {
   position: absolute;
-  top: 905px;
-  right: 30vw;
+  top: 129vh;
+  right: 6.6%;
   z-index: 7;
-  width: 6vw;
+  width: 4.5vw;
+}
+
+#read img {
+  position: absolute;
+  top: 128.5vh;
+  right: 16vw;
+  z-index: 7;
+  width: 5vw;
+}
+
+#gif img {
+  position: absolute;
+  top: 129vh;
+  right: 25.5vw;
+  z-index: 7;
+  width: 3.5vw;
 }
 
 #play img:hover {
@@ -452,13 +466,21 @@ p {
   opacity: .8;
 }
 
-#music img:hover {
+#insta img:hover {
+  opacity: .8;
+}
+
+#read img:hover {
+  opacity: .8;
+}
+
+#gif img:hover {
   opacity: .8;
 }
 
 .ingredients {
   position: absolute;
-  top: 1150px;
+  top: 143vh;
   color: white;
   margin-left: 6%;
   margin-bottom: 60px;
@@ -473,11 +495,12 @@ p {
 .ingredients ul {
   list-style: none;
   font-family: "PT Serif", "Georgia", sans-serif;
+  line-height: 24px;
 }
 
 .serving p {
   position: absolute;
-  top: 1255px;
+  top: 158.5vh;
   width: 40vw;
   color: white;
   margin-right: 24%;
@@ -490,7 +513,7 @@ p {
   font-size: 30px;
   width: 20vw;
   position: absolute;
-  top: 1150px;
+  top: 143vh;
   color: white;
   margin-left: 33%;
 }
@@ -499,11 +522,12 @@ p {
   font-family: "PT Serif", "Georgia", sans-serif;
   width: 34vw;
   position: absolute;
-  top: 1285px;
+  top: 163.5vh;
   color: white;
   margin-right: 30%;
   text-align: left;
   margin-bottom: 10px;
+  line-height: 24px;
 }
 
 #product {
@@ -513,11 +537,41 @@ p {
 #product img {
   position: absolute;
   width: 20vw;
-  top: 1202px;
+  top: 152vh;
   margin-left: 73.5%;
 }
 
 .subfeature a {
   text-decoration: none;
   color: white;
+}
+
+.navigation3 {
+  position: absolute;
+  top: 102vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navigation3 ul {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin-left: 3%;
+}
+
+.navigation3 li {
+  width: 23vw;
+  height: 23vw;
+  margin: 3px 3px 0 0;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.navigation3 img {
+  height: 23vw;
+}
+
+.navigation3 img:hover {
+  opacity: 0.5;
 }

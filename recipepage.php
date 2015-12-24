@@ -33,7 +33,6 @@ $username = select("username", "user", "username", $_SESSION['username']);
         <nav>
             <a href="places.php">Places</a>
             <a href="recipepage.php">Recipes</a>
-            <a href="">Tips</a>
         </nav>
     </div>
     <div class="account">
@@ -56,6 +55,24 @@ $username = select("username", "user", "username", $_SESSION['username']);
     <img class= "accent" src="image/featured.png">
 
     <img class="arrow" src="image/arrow3.png">
+
+    <div class="navigation3">
+        <ul>
+            <li><a href="recipetwo.php"><img src="image/tikka4.png"></a></li>
+            <li><img src="image/"></li>
+            <li><img src="image/"></li>
+            <li><img src="image/"></li>
+        </ul>
+    </div>
+
+    <div class="navigation3">
+        <ul>
+            <li><a href="recipetwo.php"><img src="image/tikka.jpg"></a></li>
+            <li><img src="image/taco.jpg"></li>
+            <li><img src="image/stew.jpg"></li>
+            <li><img src="image/grits.jpg"></li>
+        </ul>
+    </div>
     
     <script src="js/jquery-2.1.4.min.js"></script>
 

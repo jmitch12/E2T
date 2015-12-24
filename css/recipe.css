@@ -367,7 +367,7 @@ p {
 
 .subfeature2 {
   position: absolute;
-  top: 627px;
+  top: 92vh;
   left: 11.4%;
   z-index: 3;
   width: 16vw;
@@ -380,7 +380,7 @@ p {
 .back2 {
   z-index: 1;
   position: relative;
-  top: 600px;
+  top: 88vh;
   background-color: #88b067;
   opacity: 0.9;
   width: 18vw;
@@ -391,7 +391,7 @@ p {
 
 .accent2 {
   position: relative;
-  top: 383px;
+  top: 57vh;
   width: 8vw;
   margin-left: 5.4%;
   z-index: 5;
@@ -423,33 +423,41 @@ p {
 #play img {
   position: absolute;
   top: 128vh;
-  left: 52.5%;
+  left: 51%;
   z-index: 7;
   width: 5vw;
 }
 
 #watch img {
   position: absolute;
-  top: 128vh;
-  right: 32vw;
+  top: 128.5vh;
+  right: 34vw;
   z-index: 7;
   width: 5vw;
 }
 
-#music img {
+#insta img {
   position: absolute;
-  top: 130vh;
-  right: 6%;
+  top: 129vh;
+  right: 6.6%;
   z-index: 7;
-  width: 5vw;
+  width: 4.5vw;
 }
 
 #read img {
   position: absolute;
-  top: 128vh;
-  right: 20vw;
+  top: 128.5vh;
+  right: 16vw;
   z-index: 7;
   width: 5vw;
+}
+
+#gif img {
+  position: absolute;
+  top: 129vh;
+  right: 25.5vw;
+  z-index: 7;
+  width: 3.5vw;
 }
 
 #play img:hover {
@@ -460,9 +468,21 @@ p {
   opacity: .8;
 }
 
+#insta img:hover {
+  opacity: .8;
+}
+
+#read img:hover {
+  opacity: .8;
+}
+
+#gif img:hover {
+  opacity: .8;
+}
+
 .ingredients {
   position: absolute;
-  top: 1150px;
+  top: 143vh;
   color: white;
   margin-left: 6%;
   margin-bottom: 60px;
@@ -477,11 +497,12 @@ p {
 .ingredients ul {
   list-style: none;
   font-family: "PT Serif", "Georgia", sans-serif;
+  line-height: 24px;
 }
 
 .serving p {
   position: absolute;
-  top: 1255px;
+  top: 158.5vh;
   width: 40vw;
   color: white;
   margin-right: 24%;
@@ -494,7 +515,7 @@ p {
   font-size: 30px;
   width: 20vw;
   position: absolute;
-  top: 1150px;
+  top: 143vh;
   color: white;
   margin-left: 33%;
 }
@@ -503,11 +524,12 @@ p {
   font-family: "PT Serif", "Georgia", sans-serif;
   width: 34vw;
   position: absolute;
-  top: 1285px;
+  top: 163.5vh;
   color: white;
   margin-right: 30%;
   text-align: left;
   margin-bottom: 10px;
+  line-height: 24px;
 }
 
 #product {
@@ -517,7 +539,7 @@ p {
 #product img {
   position: absolute;
   width: 20vw;
-  top: 1202px;
+  top: 152vh;
   margin-left: 73.5%;
 }
 
